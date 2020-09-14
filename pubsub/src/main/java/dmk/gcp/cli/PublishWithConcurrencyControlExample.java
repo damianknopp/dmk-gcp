@@ -26,6 +26,8 @@ public class PublishWithConcurrencyControlExample {
         String projectId = args[0];
         String topicId = args[1];
 
+        String credsPath = System.getenv("GOOGLE_APPLICATION_CREDENTIALS");
+        System.out.printf("using creds: %s%n", credsPath);
         publishWithConcurrencyControlExample(projectId, topicId);
     }
 

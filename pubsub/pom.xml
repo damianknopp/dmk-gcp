@@ -23,6 +23,12 @@
             <artifactId>google-cloud-pubsub</artifactId>
             <version>${gcp.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.google.apis/google-api-services-iam -->
+        <!--        <dependency>-->
+        <!--            <groupId>com.google.apis</groupId>-->
+        <!--            <artifactId>google-api-services-iam</artifactId>-->
+        <!--            <version>v1-rev316-1.25.0</version>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

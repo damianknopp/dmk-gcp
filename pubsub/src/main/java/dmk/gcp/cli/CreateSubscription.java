@@ -12,7 +12,7 @@ public class CreateSubscription {
         String arguments = String.join(",", args);
         System.out.printf("len %d args: %s%n", args.length, arguments);
         if (args.length < 2) {
-            System.out.println("Usage: PublishWithConcurrencyControlExample <gcp proj id> <gcp topic> <gcp subscription>");
+            System.out.println("Usage: CreateSubscription <gcp proj id> <gcp topic> <gcp subscription>");
             System.exit(1);
         }
         String projectId = args[0];

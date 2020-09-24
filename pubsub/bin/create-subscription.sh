@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd $( dirname "${BASH_SOURCE[0]}" ) || exit
+cd $(dirname "${BASH_SOURCE[0]}") || exit
 source ./env.sh
 
 topic="${1:-$default_topic}"

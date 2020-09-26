@@ -8,8 +8,7 @@ source ./env.sh
 project="${1:-$default_project}"
 dataset="${2:-$default_dataset}"
 table="${3:-$default_table}"
-
-location="us-east4"
+location="${4:-$default_location}"
 
 bq --location="${location}" query \
   --destination_table "${project}":"${dataset}"."${table}" \

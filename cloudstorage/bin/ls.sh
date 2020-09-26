@@ -1,3 +1,0 @@
-
-
-gsutil ls gs:///

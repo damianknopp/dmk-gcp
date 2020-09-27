@@ -5,5 +5,9 @@ source ./env.sh
 
 project="${1:-$default_project}"
 function="${2:-$default_function}"
+location="${3:-$default_location}"
 
-gcloud functions describe --project "${project}" "${function}"
+gcloud functions describe \
+  --project "${project}" \
+  --region "${location}" \
+  "${function}"

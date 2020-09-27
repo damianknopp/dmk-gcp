@@ -11,6 +11,7 @@ gcloud projects add-iam-policy-binding "${project}" \
   --member="serviceAccount:$sa@$project.iam.gserviceaccount.com" \
   --role=roles/viewer \
   --role=roles/editor \
+  --role=roles/pubsub.publisher \
   --role=roles/storage.objectAdmin \
   --role=roles/storage.admin \
   --role=roles/storage.hmacKeyAdmin

@@ -6,4 +6,4 @@ source ./env.sh
 proj="${1:-$default_project}"
 bucket="${2:-$default_bucket}"
 
-gsutil ls -p "${proj}" gs://"${bucket}"
+gsutil cp ../data/*.csv gs://"${bucket}"

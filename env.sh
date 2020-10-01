@@ -6,6 +6,8 @@
 prefix="dmk"
 export default_project="${prefix}-gcp-demo"
 
+# appengine
+export default_appengine_service="${prefix}-appengine-demo"
 # function
 export default_function="${prefix}-function"
 export default_function_sa="${prefix}-functions-sa"

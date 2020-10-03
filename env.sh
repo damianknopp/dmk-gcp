@@ -27,3 +27,6 @@ export default_sa="${prefix}-pubsub-sa"
 export default_topic="${prefix}-topic"
 export default_dlq="${default_topic}-dlq"
 export default_subscription="${prefix}-subscription"
+
+# dataproc
+export default_cluster="${prefix}-cluster"

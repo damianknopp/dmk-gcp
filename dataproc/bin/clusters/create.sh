@@ -1,12 +1,18 @@
 #!/usr/bin/env bash
 
 cd $(dirname "${BASH_SOURCE[0]}")
+cd ../
 source ./env.sh
+cd -
 
-cluster=${1:-$default_cluster}
-project=""
-projectid=""
+project="${1:-$default_project}"
+cluster=${2:-$default_cluster}
+#projectid=""
 
+num_workers=2
+
+#  --enable-component-gateway
+#  --service-account "${projectid}-compute@developer.gserviceaccount.com" \
 # you may need to grant dataproc.worker to run this command
 gcloud dataproc clusters create "${cluster}" \
   --tags "${cluster}" \
@@ -14,9 +20,9 @@ gcloud dataproc clusters create "${cluster}" \
   --master-machine-type 'n2-standard-4' \
   --worker-machine-type 'n2-standard-2' \
   --image-version 1.5-debian10 \
-  --num-workers 2 \
+  --num-workers "${num_workers}" \
+  --num-preemptible-workers "${num_workers}" \
   --num-masters 1 \
   --scopes default,bigquery \
   --project "${project}" \
-  --service-account "'${projectid}-compute@developer.gserviceaccount.com'" \
   --async

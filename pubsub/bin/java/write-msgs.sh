@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
-set -x
-cd $(dirname "${BASH_SOURCE[0]}")
-source ../env.sh
-cd -
+
+pushd $(dirname "${BASH_SOURCE[0]}")
+pushd ../
+source ./env.sh
+popd
+popd
+
 project="${1:-$default_project}"
 topic="${2:-$default_topic}"
 

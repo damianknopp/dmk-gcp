@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-cd $(dirname "${BASH_SOURCE[0]}")
-source ../env.sh
-cd -
+pushd $(dirname "${BASH_SOURCE[0]}")
+pushd ../
+source ./env.sh
+popd
+popd
+
 project="${1:-$default_project}"
 subscription="${2:-$default_subscription}"
 

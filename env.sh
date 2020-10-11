@@ -2,6 +2,7 @@
 
 # print commands before running
 #set -x
+set -euo pipefail
 
 prefix="dmk"
 export default_project="${prefix}-gcp-demo"
@@ -30,3 +31,6 @@ export default_subscription="${prefix}-subscription"
 
 # dataproc
 export default_cluster="${prefix}-cluster"
+
+# dataflow
+export default_flow="${prefix}-flow"

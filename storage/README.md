@@ -22,5 +22,5 @@ or visit;
 
 Clean up;
 ```
-./bin/remove.sh
+./bin/rm.sh
 ```

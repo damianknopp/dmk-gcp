@@ -4,7 +4,6 @@ cd $(dirname "${BASH_SOURCE[0]}")
 source ./env.sh
 
 dataset="${1:-$default_dataset}"
+table="${2:-$default_table}"
 
-bq ls -p
-bq ls -d
-bq ls "${dataset}"
+bq rm "${dataset}.${table}"
